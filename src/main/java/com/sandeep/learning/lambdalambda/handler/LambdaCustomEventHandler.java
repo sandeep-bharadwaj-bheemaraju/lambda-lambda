@@ -143,7 +143,7 @@ public class LambdaCustomEventHandler implements RequestHandler<LambdaEvent, Lam
             lambdaResponse.setJobRunId(jobRunId);
             lambdaResponse.setMessage("processing initiated for files "+inProcessFiles.toString());
         }
-        if (inProcessFilesCount == 0 && readyFilesCount == 0) {
+        else if (inProcessFilesCount == 0 && readyFilesCount == 0) {
 
             context.getLogger().log("NO FILES TO PROCESS..");
 
